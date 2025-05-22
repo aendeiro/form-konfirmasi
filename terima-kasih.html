@@ -16,8 +16,9 @@
 </head>
 <body>
   <h2>Terima kasih, <span id="nama"></span>!</h2>
-  <p>Data Anda dengan tanggal kunjungan <span id="tanggal"></span> telah kami terima.</p>
-
+  <p>Data Anda dengan tanggal foto <span id="tanggal"></span> telah kami terima.</p>
+  <p>Jika tanggal foto salah, Silahkan isi kembali dengan benar! Data lama anda akan terhapus</p>
+  
   <script>
     const params = new URLSearchParams(window.location.search);
     document.getElementById("nama").textContent = params.get("nama") || "Pengunjung";
