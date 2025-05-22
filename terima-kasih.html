@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Terima Kasih</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 80px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <h2>Terima kasih, <span id="nama"></span>!</h2>
+  <p>Data Anda dengan tanggal kunjungan <span id="tanggal"></span> telah kami terima.</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("nama").textContent = params.get("nama") || "Pengunjung";
+    document.getElementById("tanggal").textContent = params.get("tanggal") || "-";
+  </script>
+</body>
+</html>
